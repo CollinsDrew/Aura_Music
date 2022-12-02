@@ -1,5 +1,5 @@
 .leftMenu {
-  width: 240px;
+  width: 280px;
   height: 100%;
   min-height: 100vh;
   background: rgba(34, 34, 34, 0.6);
@@ -9,9 +9,20 @@
   transition: all 0.3s ease;
 }
 
-.logoContainer {
+.leftMenu .logoContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #f1f1f1;
+}
+.leftMenu .logoContainer i {
+  font-size: 30px;
+}
+
+.leftMenu .logoContainer i:nth-of-type(2) {
+  font-size: 20px;
+}
+
+.leftMenu .logoContainer h2 {
+  font-size: 20px;
 }

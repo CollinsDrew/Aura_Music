@@ -121,3 +121,60 @@
   color: #f1f1f1;
   transition: 0.3s;
 }
+
+.playListContainer {
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.playListContainer .nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #848484;
+  margin-bottom: 10px;
+}
+
+.playListContainer .nameContainer p {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.playListContainer .nameContainer i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.playListContainer .playListScroll {
+  height: 140px;
+  overflow-x: hidden; /* Stops scrolling side to side*/
+  overflow-y: scroll; /* Allows scrolling up & down but hides scroll bar*/
+  position: relative;
+}
+
+.playListContainer .playListScroll .playList {
+  display: flex;
+  color: #848484;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.playListContainer .playListScroll .playList i {
+  font-size: 18px;
+}
+
+.playListContainer .playListScroll .playList .list {
+  margin-right: 15px;
+}
+
+.playListContainer .playListScroll .playList .trash {
+  margin-left: auto;
+}
+
+.playListContainer .playListScroll .playList p {
+  font-size: 16px;
+  text-overflow: ellipsis; /* adds ... instead of overflowing or hidden text*/
+  overflow: hidden;
+  display: inline;
+}

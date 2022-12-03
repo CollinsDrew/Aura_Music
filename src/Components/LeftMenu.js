@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/LeftMenu.css";
 import { Menu } from "./Menu";
 import { MenuList } from "./MenuList";
+import { MenuPlaylist } from "./MenuPlaylist";
 
 import { FaMicrophoneAlt, FaEllipsisH } from "react-icons/fa";
 import { BiSearchAlt } from "react-icons/bi";
@@ -27,6 +28,7 @@ function LeftMenu() {
       </div>
 
       <Menu title={"Menu"} menuObject={MenuList} />
+      <MenuPlaylist />
     </div>
   );
 }

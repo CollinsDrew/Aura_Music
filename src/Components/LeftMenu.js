@@ -1,5 +1,7 @@
 import React from "react";
 import "../Styles/LeftMenu.css";
+import { Menu } from "./Menu";
+import { MenuList } from "./MenuList";
 
 import { FaMicrophoneAlt, FaEllipsisH } from "react-icons/fa";
 import { BiSearchAlt } from "react-icons/bi";
@@ -19,10 +21,12 @@ function LeftMenu() {
 
       <div className="searchBox">
         <input type="text" placeholder="Search..." />
-        <i>
+        <i className="searchIcon">
           <BiSearchAlt />
         </i>
       </div>
+
+      <Menu title={"Menu"} menuObject={MenuList} />
     </div>
   );
 }

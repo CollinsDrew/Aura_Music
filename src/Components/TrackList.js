@@ -17,12 +17,12 @@ function TrackList() {
           <BsVolumeUpFill />
         </i>
         <input type="range" />
-        <i>
+        {/* <i>
           <BsMusicNoteList />
-        </i>
-        <i>
+        </i> */}
+        {/* <i>
           <FaDesktop />
-        </i>
+        </i> */}
       </div>
     </div>
   );

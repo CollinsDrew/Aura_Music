@@ -21,46 +21,31 @@ function Cards() {
       <div className="cards">
         <img src={HipHop} alt="Hip Hop Music" />
         <h2 className="cardTitle">Hip Hop</h2>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
-          amet dictum augue.
-        </h2>
+        <h2>Your destination for the freshest hip-hop/rap</h2>
       </div>
 
       <div className="cards">
         <img src={Dance} alt="Dance Music" />
         <h2 className="cardTitle">Dance</h2>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
-          amet dictum augue.
-        </h2>
+        <h2>Dance bangers for those good vibes only moments</h2>
       </div>
 
       <div className="cards">
         <img src={RnB} alt="R'n'B Music" />
         <h2 className="cardTitle">R'n'B</h2>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
-          amet dictum augue.
-        </h2>
+        <h2>For those smooth or hot R'n'B tunes, we got you</h2>
       </div>
 
       <div className="cards">
         <img src={Punk} alt="Punk Music" />
         <h2 className="cardTitle">Punk</h2>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
-          amet dictum augue.
-        </h2>
+        <h2>The newest Punk music you need in your life</h2>
       </div>
 
       <div className="cards">
         <img src={Disco} alt="Disco Music" />
         <h2 className="cardTitle">Disco</h2>
-        <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit
-          amet dictum augue.
-        </h2>
+        <h2>Get your groove on to these disco floor fillers</h2>
       </div>
     </div>
   );

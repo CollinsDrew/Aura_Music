@@ -5,6 +5,7 @@ import { MenuList } from "./MenuList";
 import { MenuPlaylist } from "./MenuPlaylist";
 import { TrackList } from "./TrackList";
 
+import { GiCompactDisc } from "react-icons/gi";
 import { FaMicrophoneAlt, FaEllipsisH } from "react-icons/fa";
 import { BiSearchAlt } from "react-icons/bi";
 
@@ -13,7 +14,7 @@ function LeftMenu() {
     <div className="leftMenu">
       <div className="logoContainer">
         <i>
-          <FaMicrophoneAlt />
+          <GiCompactDisc />
         </i>
         <h2>Aura</h2>
         <i>

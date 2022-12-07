@@ -1,18 +1,21 @@
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { IndexPage } from "./Pages/Index";
+import { GenrePage } from "./Pages/Genre";
 import "./App.css";
-import { LeftMenu } from "./Components/LeftMenu";
-import { MainContainer } from "./Components/MainContainer";
-import { RightMenu } from "./Components/RightMenu";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <IndexPage />,
+  },
+  {
+    path: "/genre/:genreId",
+    element: <GenrePage />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <LeftMenu />
-      <MainContainer />
-      <RightMenu />
-
-      <div className="background"></div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

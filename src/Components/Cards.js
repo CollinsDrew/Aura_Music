@@ -7,6 +7,33 @@ import RnB from "../Img/rnb_icon.png";
 import Punk from "../Img/punk_icon.png";
 import Disco from "../Img/disco.png";
 
+const genres = [
+  {
+    id: 1,
+    name: "Country",
+  },
+  {
+    id: 2,
+    name: "Hip-Hop",
+  },
+  {
+    id: 3,
+    name: "Dance",
+  },
+  {
+    id: 4,
+    name: "RnB",
+  },
+  {
+    id: 5,
+    name: "Punk",
+  },
+  {
+    id: 6,
+    name: "Disco",
+  },
+];
+
 function Cards() {
   return (
     <div className="cardContainer">

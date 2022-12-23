@@ -9,16 +9,16 @@ const MenuList = [
     icon: <BsFillHouseFill />,
     name: "Home",
   },
-  {
-    id: 2,
-    icon: <BiPulse />,
-    name: "Discover",
-  },
-  {
-    id: 3,
-    icon: <FaBroadcastTower />,
-    name: "Radio",
-  },
+  // {
+  //   id: 2,
+  //   icon: <BiPulse />,
+  //   name: "Discover",
+  // },
+  // {
+  //   id: 3,
+  //   icon: <FaBroadcastTower />,
+  //   name: "Radio",
+  // },
   {
     id: 4,
     icon: <FaMicrophoneAlt />,

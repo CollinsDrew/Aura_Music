@@ -7,32 +7,34 @@ import RnB from "../Img/rnb_icon.png";
 import Punk from "../Img/punk_icon.png";
 import Disco from "../Img/disco.png";
 
-const genres = [
-  {
-    id: 1,
-    name: "Country",
-  },
-  {
-    id: 2,
-    name: "Hip-Hop",
-  },
-  {
-    id: 3,
-    name: "Dance",
-  },
-  {
-    id: 4,
-    name: "RnB",
-  },
-  {
-    id: 5,
-    name: "Punk",
-  },
-  {
-    id: 6,
-    name: "Disco",
-  },
-];
+import { Link, useParams } from "react-router-dom";
+
+// const genres = [
+//   {
+//     id: 1,
+//     name: "Country",
+//   },
+//   {
+//     id: 2,
+//     name: "Hip-Hop",
+//   },
+//   {
+//     id: 3,
+//     name: "Dance",
+//   },
+//   {
+//     id: 4,
+//     name: "RnB",
+//   },
+//   {
+//     id: 5,
+//     name: "Punk",
+//   },
+//   {
+//     id: 6,
+//     name: "Disco",
+//   },
+// ];
 
 function Cards() {
   return (
@@ -52,9 +54,11 @@ function Cards() {
       </div>
 
       <div className="cards">
-        <img src={Dance} alt="Dance Music" />
-        <h2 className="cardTitle">Dance</h2>
-        <h2>Dance bangers for those good vibes only moments</h2>
+        <Link to="/dance">
+          <img src={Dance} alt="Dance Music" />
+          <h2 className="cardTitle">Dance</h2>
+          <h2>Dance bangers for those good vibes only moments</h2>
+        </Link>
       </div>
 
       <div className="cards">

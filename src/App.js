@@ -2,7 +2,14 @@ import "./App.css";
 import { LeftMenu } from "./Components/LeftMenu";
 import { MainContainer } from "./Components/MainContainer";
 import { RightMenu } from "./Components/RightMenu";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
+import { DanceTunes } from "./Components/DanceTunes";
 
 function App() {
   return (
@@ -11,6 +18,7 @@ function App() {
         <LeftMenu />
         <Routes>
           <Route path="/" element={<MainContainer />} />
+          <Route path="/dance" element={<DanceTunes />} />
         </Routes>
         {/* <MainContainer /> */}
         <RightMenu />

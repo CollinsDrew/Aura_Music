@@ -4,7 +4,6 @@ import "../Styles/AudioList.css";
 // import "../Styles/MainContainer.css";
 import { Link, useParams } from "react-router-dom";
 import { FaRegClock, FaHeart, FaRegHeart } from "react-icons/fa";
-// import soundfile from "../Songs";
 
 const danceSongs = [
   {
@@ -34,6 +33,17 @@ const danceSongs = [
 ];
 
 function DanceTunes() {
+  const [song, setSong] = useState(danceSongs[0].song);
+  const [img, setImg] = useState(danceSongs.image);
+
+  const changeFavourite = (id) => {
+    danceSongs.forEach((song) => {
+      if (song.id == id) {
+        song.favourite = !song.favourite;
+      }
+    });
+  };
+
   return (
     <div className="audioList">
       <Banner />
@@ -65,7 +75,10 @@ function DanceTunes() {
                     </p>
                   </div>
 
-                  <div className="favourite">
+                  <div
+                    className="favourite"
+                    onClick={() => changeFavourite(song?.id)}
+                  >
                     {song?.favourite ? (
                       <i>
                         <FaHeart />

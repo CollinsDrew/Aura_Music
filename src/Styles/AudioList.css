@@ -105,7 +105,12 @@
   margin-right: 5px;
 }
 
-.audioList .songs .song .section .hits .favourite i {
-  color: #49e12e;
+/* .audioList .songs .song .section .hits .favourite i {
+  color: #49e12e !important;
+  filter: drop-shadow(0px 0px 4px #49e12e);
+} */
+
+.favourite i {
+  color: #49e12e !important;
   filter: drop-shadow(0px 0px 4px #49e12e);
 }

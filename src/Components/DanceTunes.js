@@ -53,7 +53,8 @@ function DanceTunes() {
 
                 <div className="section">
                   <p className="songName">
-                    Sample <span className="spanArtist">Artist Name</span>
+                    {song?.songName}{" "}
+                    <span className="spanArtist">{song?.artist}</span>
                   </p>
 
                   <div className="hits">
@@ -65,12 +66,15 @@ function DanceTunes() {
                   </div>
 
                   <div className="favourite">
-                    <i>
-                      <FaHeart />
-                    </i>
-                    <i>
-                      <FaRegHeart />
-                    </i>
+                    {song?.favourite ? (
+                      <i>
+                        <FaHeart />
+                      </i>
+                    ) : (
+                      <i>
+                        <FaRegHeart />
+                      </i>
+                    )}
                   </div>
                 </div>
               </div>

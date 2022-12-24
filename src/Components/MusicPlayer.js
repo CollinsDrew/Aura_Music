@@ -20,15 +20,30 @@ function MusicPlayer({ song, imgSrc }) {
   const [isLove, setLoved] = useState(false);
   const [isPlaying, setPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
 
   const audioPlayer = useRef(); // Our audio tag
   const progressBar = useRef(); // Our progress bar
+  const animationRef = useRef(); // Progress bar animation
 
   useEffect(() => {
     const seconds = Math.floor(audioPlayer.current.duration);
 
     setDuration(seconds);
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+
+  const changPlayPause = () => {
+    const prevValue = isPlaying;
+    if (!prevValue) {
+      audioPlayer.current.play();
+      animationRef.current = requestAnimationFrame(whilePlaying);
+    } else {
+      audioPlayer.current.pause();
+      cancelAnimationFrame(animationRef.current);
+    }
+
+    setPlaying(!prevValue);
+  };
 
   const CalculateTime = (sec) => {
     const minutes = Math.floor(sec / 60);
@@ -41,15 +56,24 @@ function MusicPlayer({ song, imgSrc }) {
     return `${returnMin}:${returnSec}`;
   };
 
-  const changPlayPause = () => {
-    const prevValue = isPlaying;
-    if (!prevValue) {
-      audioPlayer.current.play();
-    } else {
-      audioPlayer.current.pause();
-    }
+  const whilePlaying = () => {
+    progressBar.current.value = audioPlayer.current.currentTime;
+    changeCurrentTime();
+    animationRef.current = requestAnimationFrame(whilePlaying);
+  };
 
-    setPlaying(!prevValue);
+  const changeProgress = () => {
+    audioPlayer.current.currentTime = progressBar.current.value;
+    changeCurrentTime();
+  };
+
+  const changeCurrentTime = () => {
+    progressBar.current.style.setProperty(
+      "--player-played",
+      `${(progressBar.current.value / duration) * 100}%`
+    );
+
+    setCurrentTime(progressBar.current.value);
   };
 
   const changeLoved = () => {
@@ -121,8 +145,13 @@ function MusicPlayer({ song, imgSrc }) {
           </div>
         </div>
         <div className="bottom">
-          <div className="currentTime">00:00</div>
-          <input type="range" className="progressBar" ref={progressBar} />
+          <div className="currentTime">{CalculateTime(currentTime)}</div>
+          <input
+            type="range"
+            className="progressBar"
+            ref={progressBar}
+            onChange={changeProgress}
+          />
           <div className="duration">
             {duration && !isNaN(duration) && CalculateTime(duration)
               ? CalculateTime(duration)

@@ -123,7 +123,11 @@ function MusicPlayer({ song, imgSrc }) {
         <div className="bottom">
           <div className="currentTime">00:00</div>
           <input type="range" className="progressBar" ref={progressBar} />
-          <div className="duration">{CalculateTime(duration)}</div>
+          <div className="duration">
+            {duration && !isNaN(duration) && CalculateTime(duration)
+              ? CalculateTime(duration)
+              : "00:00"}
+          </div>
         </div>
       </div>
     </div>

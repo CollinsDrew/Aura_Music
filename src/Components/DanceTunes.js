@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Banner } from "./Banner.js";
+import { MusicPlayer } from "./MusicPlayer.js";
+
 import "../Styles/AudioList.css";
+import "../Styles/MusicPlayer.css";
 // import "../Styles/MainContainer.css";
 import { Link, useParams } from "react-router-dom";
 import { FaRegClock, FaHeart, FaRegHeart } from "react-icons/fa";
@@ -37,6 +40,17 @@ function DanceTunes() {
   const [song, setSong] = useState(danceSongs[0].song);
   const [img, setImg] = useState(danceSongs.image);
 
+  useEffect(() => {
+    const songs = document.querySelectorAll(".songs");
+
+    function changeMenuActive() {
+      songs.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    songs.forEach((n) => n.addEventListener("click", changeMenuActive));
+  }, []);
+
   const changeFavourite = (id) => {
     danceSongs.forEach((song) => {
       if (song.id == id) {
@@ -45,6 +59,11 @@ function DanceTunes() {
     });
 
     setSongs([...danceSongs]);
+  };
+
+  const setMainSong = (songSrc, imgSrc) => {
+    setSong(songSrc);
+    setImg(imgSrc);
   };
 
   return (
@@ -58,7 +77,11 @@ function DanceTunes() {
         {/* maybe change songs to danceSongs in map */}
         {songs &&
           songs.map((song, index) => (
-            <div className="songs" key={song?.id}>
+            <div
+              className="songs"
+              key={song?.id}
+              onClick={() => setMainSong(song?.song, song?.image)}
+            >
               <div className="count">{`#${index + 1}`}</div>
               <div className="song">
                 <div className="imgBox">
@@ -98,6 +121,8 @@ function DanceTunes() {
             </div>
           ))}
       </div>
+
+      <MusicPlayer song={song} imgSrc={img} />
     </div>
   );
 }

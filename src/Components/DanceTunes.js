@@ -23,7 +23,7 @@ const danceSongs = [
     image: process.env.PUBLIC_URL + "../TrackImages/jaysomeday_highfly.jpeg",
   },
   {
-    id: 2,
+    id: 3,
     favourite: false,
     songName: "Get Away",
     artist: "Liqwyd",
@@ -33,6 +33,7 @@ const danceSongs = [
 ];
 
 function DanceTunes() {
+  const [songs, setSongs] = useState(danceSongs);
   const [song, setSong] = useState(danceSongs[0].song);
   const [img, setImg] = useState(danceSongs.image);
 
@@ -42,6 +43,8 @@ function DanceTunes() {
         song.favourite = !song.favourite;
       }
     });
+
+    setSongs([...danceSongs]);
   };
 
   return (
@@ -52,8 +55,9 @@ function DanceTunes() {
       </h2>
 
       <div className="songsContainer">
-        {danceSongs &&
-          danceSongs.map((song, index) => (
+        {/* maybe change songs to danceSongs in map */}
+        {songs &&
+          songs.map((song, index) => (
             <div className="songs" key={song?.id}>
               <div className="count">{`#${index + 1}`}</div>
               <div className="song">

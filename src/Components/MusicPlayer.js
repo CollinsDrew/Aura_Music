@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../Styles/MusicPlayer.css";
 
 import {
@@ -19,9 +19,27 @@ function MusicPlayer({ song, imgSrc }) {
 
   const [isLove, setLoved] = useState(false);
   const [isPlaying, setPlaying] = useState(false);
+  const [duration, setDuration] = useState(0);
 
   const audioPlayer = useRef(); // Our audio tag
   const progressBar = useRef(); // Our progress bar
+
+  useEffect(() => {
+    const seconds = Math.floor(audioPlayer.current.duration);
+
+    setDuration(seconds);
+  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+
+  const CalculateTime = (sec) => {
+    const minutes = Math.floor(sec / 60);
+    // <10 print as 09 or 11,12 etc
+    const returnMin = minutes < 10 ? `0${minutes}` : `${minutes}`;
+
+    const seconds = Math.floor(sec % 60);
+    const returnSec = seconds < 10 ? `0${seconds}` : `${seconds}`;
+
+    return `${returnMin}:${returnSec}`;
+  };
 
   const changPlayPause = () => {
     const prevValue = isPlaying;
@@ -105,7 +123,7 @@ function MusicPlayer({ song, imgSrc }) {
         <div className="bottom">
           <div className="currentTime">00:00</div>
           <input type="range" className="progressBar" ref={progressBar} />
-          <div className="duration">00:00</div>
+          <div className="duration">{CalculateTime(duration)}</div>
         </div>
       </div>
     </div>

@@ -90,7 +90,11 @@ function MusicPlayer({ song, imgSrc }) {
             </i>
           </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <div className="currentTime">00:00</div>
+          <input type="range" className="progressBar" />
+          <div className="duration">00:00</div>
+        </div>
       </div>
     </div>
   );

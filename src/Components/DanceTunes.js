@@ -70,7 +70,7 @@ function DanceTunes() {
     <div className="audioList">
       <Banner />
       <h2 className="title">
-        Country <span>{`${danceSongs.length} songs`} </span>
+        Dance <span>{`${danceSongs.length} songs`} </span>
       </h2>
 
       <div className="songsContainer">

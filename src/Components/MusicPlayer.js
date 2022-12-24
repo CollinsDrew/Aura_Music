@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../Styles/MusicPlayer.css";
 
 import {
@@ -20,8 +20,18 @@ function MusicPlayer({ song, imgSrc }) {
   const [isLove, setLoved] = useState(false);
   const [isPlaying, setPlaying] = useState(false);
 
+  const audioPlayer = useRef(); // Our audio tag
+  const progressBar = useRef(); // Our progress bar
+
   const changPlayPause = () => {
-    setPlaying(!isPlaying);
+    const prevValue = isPlaying;
+    if (!prevValue) {
+      audioPlayer.current.play();
+    } else {
+      audioPlayer.current.pause();
+    }
+
+    setPlaying(!prevValue);
   };
 
   const changeLoved = () => {
@@ -30,9 +40,11 @@ function MusicPlayer({ song, imgSrc }) {
 
   return (
     <div className="MusicPlayer">
-      <div className="songImage"></div>
+      <div className="songImage">
+        <img src={imgSrc} />
+      </div>
       <div className="songAttributes">
-        <audio src={song} preload="metadata" />
+        <audio src={song} preload="metadata" ref={audioPlayer} />
 
         <div className="top">
           <div className="left">
@@ -92,7 +104,7 @@ function MusicPlayer({ song, imgSrc }) {
         </div>
         <div className="bottom">
           <div className="currentTime">00:00</div>
-          <input type="range" className="progressBar" />
+          <input type="range" className="progressBar" ref={progressBar} />
           <div className="duration">00:00</div>
         </div>
       </div>

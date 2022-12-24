@@ -89,4 +89,67 @@
   appearance: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* Chrome and Safari */
+.songAttributes .bottom .progressBar::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #848484;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+.songAttributes .bottom .progressBa::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+/* Firefox */
+.songAttributes .bottom .progressBar::-moz-range-track {
+  width: 75%;
+  height: 5px;
+  outline: none;
+  border: none;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.songAttributes .bottom .progressBar::-moz-range-progress {
+  background-color: #848484;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+.songAttributes .bottom .progressBa::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+/* General styling again */
+
+.songAttributes .bottom .currentTime,
+.songAttributes .bottom .duration {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: bold;
 }

@@ -33,6 +33,23 @@ const danceSongs = [
     song: process.env.PUBLIC_URL + "../Songs/liqwyd-get-away.mp3",
     image: process.env.PUBLIC_URL + "../TrackImages/liqwyd-get-away.jpeg",
   },
+  {
+    id: 4,
+    favourite: false,
+    songName: "Mango",
+    artist: "Tubebackr",
+    song: process.env.PUBLIC_URL + "../Songs/tubebackr-mango.mp3",
+    image: process.env.PUBLIC_URL + "../TrackImages/mango_tubebackr.jpeg",
+  },
+  {
+    id: 5,
+    favourite: false,
+    songName: "Fight",
+    artist: "Alex Productions",
+    song: process.env.PUBLIC_URL + "../Songs/alex-productions-fight.mp3",
+    image:
+      process.env.PUBLIC_URL + "../TrackImages/alex-productions-fight.jpeg",
+  },
 ];
 
 function DanceTunes() {

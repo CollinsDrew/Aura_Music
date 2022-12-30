@@ -148,7 +148,7 @@
 }
 
 .playListContainer .playListScroll {
-  height: 140px;
+  height: 240px;
   overflow-x: hidden; /* Stops scrolling side to side*/
   overflow-y: scroll; /* Allows scrolling up & down but hides scroll bar*/
   position: relative;

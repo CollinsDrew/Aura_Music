@@ -50,48 +50,48 @@ const danceSongs = [
     image:
       process.env.PUBLIC_URL + "../TrackImages/alex-productions-fight.jpeg",
   },
-  {
-    id: 6,
-    favourite: false,
-    songName: "Miss You",
-    artist: "Liqwyd",
-    song: process.env.PUBLIC_URL + "../Songs/liqwyd-miss-you.mp3",
-    image: process.env.PUBLIC_URL + "../TrackImages/missyou_liqwyd.jpeg",
-  },
-  {
-    id: 7,
-    favourite: false,
-    songName: "Limujii",
-    artist: "Xii",
-    song: process.env.PUBLIC_URL + "../Songs/limujii-xii.mp3",
-    image: process.env.PUBLIC_URL + "../TrackImages/xii-lumijii.jpeg",
-  },
-  {
-    id: 8,
-    favourite: false,
-    songName: "Keep Me",
-    artist: "Peyruis",
-    song: process.env.PUBLIC_URL + "../Songs/peyruis-keep-me.mp3",
-    image: process.env.PUBLIC_URL + "../TrackImages/keepme-peyruis.jpeg",
-  },
-  {
-    id: 9,
-    favourite: false,
-    songName: "Magical Journey Through Space",
-    artist: "Leonell Cassio",
-    song:
-      process.env.PUBLIC_URL +
-      "../Songs/leonell-cassio-magical-journey-through-space.mp3",
-    image: process.env.PUBLIC_URL + "../TrackImages/leonell_magical.jpeg",
-  },
-  {
-    id: 10,
-    favourite: false,
-    songName: "Vibin '53",
-    artist: "Peyruis",
-    song: process.env.PUBLIC_URL + "../Songs/peyruis-vibin-53.mp3",
-    image: process.env.PUBLIC_URL + "../TrackImages/peyruis-vibin.jpeg",
-  },
+  // {
+  //   id: 6,
+  //   favourite: false,
+  //   songName: "Miss You",
+  //   artist: "Liqwyd",
+  //   song: process.env.PUBLIC_URL + "../Songs/liqwyd-miss-you.mp3",
+  //   image: process.env.PUBLIC_URL + "../TrackImages/missyou_liqwyd.jpeg",
+  // },
+  // {
+  //   id: 7,
+  //   favourite: false,
+  //   songName: "Limujii",
+  //   artist: "Xii",
+  //   song: process.env.PUBLIC_URL + "../Songs/limujii-xii.mp3",
+  //   image: process.env.PUBLIC_URL + "../TrackImages/xii-lumijii.jpeg",
+  // },
+  // {
+  //   id: 8,
+  //   favourite: false,
+  //   songName: "Keep Me",
+  //   artist: "Peyruis",
+  //   song: process.env.PUBLIC_URL + "../Songs/peyruis-keep-me.mp3",
+  //   image: process.env.PUBLIC_URL + "../TrackImages/keepme-peyruis.jpeg",
+  // },
+  // {
+  //   id: 9,
+  //   favourite: false,
+  //   songName: "Magical Journey Through Space",
+  //   artist: "Leonell Cassio",
+  //   song:
+  //     process.env.PUBLIC_URL +
+  //     "../Songs/leonell-cassio-magical-journey-through-space.mp3",
+  //   image: process.env.PUBLIC_URL + "../TrackImages/leonell_magical.jpeg",
+  // },
+  // {
+  //   id: 10,
+  //   favourite: false,
+  //   songName: "Vibin '53",
+  //   artist: "Peyruis",
+  //   song: process.env.PUBLIC_URL + "../Songs/peyruis-vibin-53.mp3",
+  //   image: process.env.PUBLIC_URL + "../TrackImages/peyruis-vibin.jpeg",
+  // },
 ];
 
 function DanceTunes() {

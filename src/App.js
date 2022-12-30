@@ -10,6 +10,7 @@ import {
   useParams,
 } from "react-router-dom";
 import { DanceTunes } from "./Components/DanceTunes";
+import { CountryTunes } from "./Components/CountryTunes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContainer />} />
           <Route path="/dance" element={<DanceTunes />} />
+          <Route path="/country" element={<CountryTunes />} />
         </Routes>
         {/* <MainContainer /> */}
         <RightMenu />

@@ -13,11 +13,13 @@ function Cards() {
   return (
     <div className="cardContainer">
       <div className="cards">
-        <img src={Country} alt="Country Music" />
-        <h2 className="cardTitle">Country</h2>
-        <h2>
-          Yee-Haw! Check out these modern hits from upcoming country stars
-        </h2>
+        <Link to="/country">
+          <img src={Country} alt="Country Music" />
+          <h2 className="cardTitle">Country</h2>
+          <h2>
+            Yee-Haw! Check out these modern hits from upcoming country stars
+          </h2>
+        </Link>
       </div>
 
       <div className="cards">

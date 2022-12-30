@@ -1,7 +1,10 @@
 .MusicPlayer {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   display: flex;
+  /* position: absolute; */
+  bottom: 0;
+  /* margin-bottom: 80px; */
 }
 
 .songImage {

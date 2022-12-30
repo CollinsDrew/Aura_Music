@@ -30,3 +30,35 @@
   height: 5rem;
   background-image: linear-gradient(transparent, black);
 }
+@media screen and (max-width: 550px) {
+  .mainContainer {
+    min-width: 380px;
+  }
+
+  .content {
+    padding: 10px 15px;
+  }
+
+  .banner .content .artist .left .name h2 {
+    font-size: 25px;
+  }
+
+  .audioList {
+    padding: 10px 5px;
+  }
+
+  .audioList .songs .song .section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .audioList .songs .song .section .songName {
+    width: 100%;
+  }
+
+  .audioList .songs .song .section .hits {
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  }
+}

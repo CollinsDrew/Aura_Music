@@ -88,7 +88,7 @@ const danceSongs = [
     id: 10,
     favourite: false,
     songName: "Vibin '53",
-    artist: "Xii",
+    artist: "Peyruis",
     song: process.env.PUBLIC_URL + "../Songs/peyruis-vibin-53.mp3",
     image: process.env.PUBLIC_URL + "../TrackImages/peyruis-vibin.jpeg",
   },

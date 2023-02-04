@@ -8,6 +8,7 @@ import { TrackList } from "./TrackList";
 import { GiCompactDisc } from "react-icons/gi";
 import { FaMicrophoneAlt, FaEllipsisH } from "react-icons/fa";
 import { BiSearchAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function LeftMenu() {
   return (
@@ -29,7 +30,10 @@ function LeftMenu() {
         </i>
       </div>
 
+      {/* <Link to="/"> */}
       <Menu title={"Menu"} menuObject={MenuList} />
+      {/* </Link> */}
+
       <MenuPlaylist />
       {/* <TrackList /> */}
     </div>

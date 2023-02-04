@@ -13,14 +13,16 @@ import {
   FaStepForward,
 } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
+import { renderMatches } from "react-router-dom";
 
-function MusicPlayer({ song, imgSrc }) {
+function MusicPlayer({ song, imgSrc, songs }) {
   //   console.log(song, imgSrc);
 
   const [isLove, setLoved] = useState(false);
   const [isPlaying, setPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  // const [currentSong, setCurrentSong] = useState();
 
   const audioPlayer = useRef(); // Our audio tag
   const progressBar = useRef(); // Our progress bar
@@ -32,6 +34,7 @@ function MusicPlayer({ song, imgSrc }) {
     setDuration(seconds);
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
 
+  // Play and pause track
   const changPlayPause = () => {
     const prevValue = isPlaying;
     if (!prevValue) {
@@ -44,6 +47,8 @@ function MusicPlayer({ song, imgSrc }) {
 
     setPlaying(!prevValue);
   };
+
+  //Skip back tracks
 
   const CalculateTime = (sec) => {
     const minutes = Math.floor(sec / 60);

@@ -131,6 +131,9 @@ function CountryTunes() {
       <Banner />
       <h2 className="title">
         Country <span>{`${countrySongs.length} songs`} </span>
+        {/* <button onClick={() => setSong(countrySongs[0].song)}>
+          Set track #3
+        </button> */}
       </h2>
 
       <div className="songsContainer">

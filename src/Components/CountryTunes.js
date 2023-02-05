@@ -138,6 +138,7 @@ function CountryTunes() {
 
       <div className="songsContainer">
         {/* maybe change songs to danceSongs in map */}
+        {/* map music array */}
         {songs &&
           songs.map((song, index) => (
             <div
